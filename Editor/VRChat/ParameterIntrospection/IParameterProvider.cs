@@ -290,15 +290,14 @@ namespace nadena.dev.ndmf
             // Sorry, if you're maintaining compatibility with Unity 2019, you need to explicitly declare this member.
             ;
 #endif
-    }
-
-    /// <summary>
-    /// Optional interface for providers which read assets or objects other than their source component.
-    /// The source component is observed automatically. Register additional dependencies here so preview queries
-    /// invalidate when those dependencies change. Called before querying parameters or remappings.
-    /// </summary>
-    public interface IParameterProviderWithDependencies
-    {
-        void ObserveDependencies(preview.ComputeContext context);
+        /// <summary>
+        /// Registers dependencies on assets or objects other than the source component, which is observed automatically.
+        /// Called before querying parameters or remappings so preview queries invalidate when these dependencies change.
+        /// Providers which only read their source component can use the default no-op implementation.
+        /// </summary>
+        void ObserveDependencies(preview.ComputeContext context)
+        {
+            // default is a no-op
+        }
     }
 }

@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Added an optional parameter provider interface for observing preview dependencies.
+- Added a default no-op ObserveDependencies method to IParameterProvider for observing preview dependencies.
 
 ### Fixed
 - Fixed stale parameter preview queries after default value, expression parameter asset, or EditorOnly tag changes.

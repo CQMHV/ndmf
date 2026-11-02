@@ -14,7 +14,7 @@ using VRC.SDK3.Avatars.ScriptableObjects;
 namespace nadena.dev.ndmf.VRChatProviders
 {
     [ParameterProviderFor(typeof(VRCAvatarDescriptor))]
-    internal class AvatarDescriptorProvider : IParameterProvider, IParameterProviderWithDependencies
+    internal class AvatarDescriptorProvider : IParameterProvider
     {
         private VRCAvatarDescriptor _avatarDescriptor;
 
